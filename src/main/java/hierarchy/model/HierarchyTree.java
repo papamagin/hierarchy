@@ -60,7 +60,7 @@ public class HierarchyTree extends Tree<NodeData> {
     @Override
     public void deleteNode(final NodeData nodeData) throws Exception {
         final String id = nodeData.getId();
-        if (id == null || id.isEmpty()) {
+        if (isNullOrEmpty(id)) {
             throw new RuntimeException("ID must be specified");
         }
         if (!nodes.keySet().contains(id)) {
