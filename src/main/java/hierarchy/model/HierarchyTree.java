@@ -31,7 +31,6 @@ public class HierarchyTree extends Tree<NodeData> {
      */
     @Override
     public void addNode(final NodeData nodeData) throws Exception {
-        System.err.println("Node data to add: " + JsonSerialization.serializeToJson(nodeData));
         final String id = nodeData.getId();
         final String name = nodeData.getName();
         if (isNullOrEmpty(id) || isNullOrEmpty(name)) {
